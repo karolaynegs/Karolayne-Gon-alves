@@ -1,335 +1,296 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karolayne Gonçalves - Currículo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --deep-blue: #0a192f;
-            --tech-accent: #64ffda;
-            --light-slate: #a8b2d1;
-            --lightest-slate: #ccd6f6;
-            --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--deep-blue);
-            color: var(--lightest-slate);
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .header-container {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .photo-placeholder {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: rgba(100, 255, 218, 0.1);
-            border: 2px solid var(--tech-accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
-        
-        .photo-placeholder i {
-            font-size: 3rem;
-            color: var(--tech-accent);
-        }
-        
-        .header-content {
-            flex: 1;
-        }
-        
-        .header {
-            text-align: left;
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            background: linear-gradient(135deg, var(--lightest-slate), var(--tech-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-        
-        .subtitle {
-            color: var(--tech-accent);
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: flex-start;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--light-slate);
-        }
-        
-        .contact-icon {
-            color: var(--tech-accent);
-        }
-        
-        section {
-            margin-bottom: 2.5rem;
-            border-left: 2px solid var(--tech-accent);
-            padding-left: 1.5rem;
-            transition: var(--transition);
-        }
-        
-        section:hover {
-            border-left-width: 4px;
-        }
-        
-        h2 {
-            color: var(--tech-accent);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-        
-        .section-icon {
-            font-size: 1.3rem;
-        }
-        
-        .experience-item {
-            margin-bottom: 1.8rem;
-        }
-        
-        .job-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--lightest-slate);
-            margin-bottom: 0.3rem;
-        }
-        
-        .company {
-            color: var(--tech-accent);
-            font-style: italic;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .date {
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--tech-accent);
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-bottom: 0.8rem;
-        }
-        
-        ul {
-            list-style-type: none;
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--light-slate);
-        }
-        
-        li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--tech-accent);
-        }
-        
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1rem;
-        }
-        
-        .skill {
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--tech-accent);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        
-        @media print {
-            body {
-                background-color: white;
-                color: #333;
-                --tech-accent: #2a7f7f;
-                --lightest-slate: #333;
-                --light-slate: #555;
-            }
-            
-            .contact-icon {
-                color: var(--tech-accent);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 1.5rem;
-            }
-            
-            .header-container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            
-            .photo-placeholder {
-                margin-bottom: 1.5rem;
-            }
-            
-            .header {
-                text-align: center;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .contact-info {
-                justify-content: center;
-                gap: 0.8rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karolayne Gonçalves - Currículo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --deep-blue: #0a192f;
+      --tech-accent: #64ffda;
+      --light-slate: #a8b2d1;
+      --lightest-slate: #ccd6f6;
+      --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--deep-blue);
+      color: var(--lightest-slate);
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .photo-placeholder {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid var(--tech-accent);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .photo-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .header-content {
+      flex: 1;
+    }
+
+    .header {
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      background: linear-gradient(135deg, var(--lightest-slate), var(--tech-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--tech-accent);
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      color: var(--light-slate);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-icon {
+      color: var(--tech-accent);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      border-left: 2px solid var(--tech-accent);
+      padding-left: 1.5rem;
+    }
+
+    h2 {
+      color: var(--tech-accent);
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-icon {
+      font-size: 1.3rem;
+    }
+
+    .experience-item {
+      margin-bottom: 1.8rem;
+    }
+
+    .job-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--lightest-slate);
+    }
+
+    .company {
+      font-style: italic;
+      color: var(--tech-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .date {
+      background: rgba(100, 255, 218, 0.1);
+      color: var(--tech-accent);
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--light-slate);
+    }
+
+    li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--tech-accent);
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .skill {
+      background: rgba(100, 255, 218, 0.1);
+      color: var(--tech-accent);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .contact-info {
+        justify-content: center;
+      }
+
+      .photo-placeholder {
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="header-container">
-        <div class="photo-placeholder">
-    <img src="images/foto-perfil.jpeg" alt="Karolayne Gonçalves" style="width:100%; height:100%; object-fit:cover;">
-</div>
-        
-        <div class="header-content">
-            <div class="header">
-                <h1>Karolayne Gonçalves</h1>
-                <div class="subtitle">Estudante de Sistemas de Informação</div>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt contact-icon"></i>
-                        <span>(62) 9.9860-5555</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <span>gonalveskarolayne@ueg.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                        <span>Itaberaí - Goiás</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin-in contact-icon"></i>
-                        <span>linkedin.com/in/karolayne</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github contact-icon"></i>
-                        <span>github.com/karolaynegs</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="header-container">
+    <div class="photo-placeholder">
+      <img src="images/foto-perfil.jpeg" alt="Karolayne Gonçalves">
     </div>
-    
-    <section id="resumo">
-        <h2><i class="fas fa-user section-icon"></i>Sobre Mim</h2>
-        <p>Busco constantemente superar desafios, sou apaixonada por aprender e sempre me esforço para alcançar os meus objetivos com determinação e dedicação.</p>
-    </section>
-    
-    <section id="experiencia">
-        <h2><i class="fas fa-briefcase section-icon"></i>Experiência Profissional</h2>
-        
-        <div class="experience-item">
-            <div class="job-title">Gerente de Hotel</div>
-            <span class="company">Itaberaí Hotel</span>
-            <span class="date">2020 - Atualmente</span>
-            <ul>
-                <li>Compromisso com a satisfação dos clientes, envolvendo-se ativamente na resolução de problemas e assegurando um atendimento de qualidade</li>
-                <li>Gestão do orçamento do hotel, fechamento mensal de contas, liquidação de faturas e contas a receber, cobranças, lançamento de despesas e controle de estoque através do sistema Facility e planilhas Excel.</li>
-                
-            </ul>
+
+    <div class="header-content">
+      <div class="header">
+        <h1>Karolayne Gonçalves</h1>
+        <div class="subtitle">Estudante de Sistemas de Informação</div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt contact-icon"></i>
+            <span>(62) 9.9860-5555</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope contact-icon"></i>
+            <span>gonalveskarolayne@ueg.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt contact-icon"></i>
+            <span>Itaberaí - Goiás</span>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin-in contact-icon"></i>
+            <span>linkedin.com/in/karolayne</span>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github contact-icon"></i>
+            <span>github.com/karolaynegs</span>
+          </div>
         </div>
-        
-        <div class="experience-item">
-            <div class="job-title">Recepcionista</div>
-            <span class="company">Itaberaí Hotel</span>
-            <span class="date">2017 - 2020</span>
-            <ul>
-                <li>Atendimento ao cliente e gestão de reservas</li>
-                <li>Emissão de documentos fiscais e controle de caixa</li>
-                <li>Cadastro de hospedes e empresas responsável por reservas, check-in e check-out.</li>
-            </ul>
-        </div>
-    </section>
-    
-    <section id="formacao">
-        <h2><i class="fas fa-graduation-cap section-icon"></i>Formação Acadêmica</h2>
-        
-        <div class="experience-item">
-            <div class="job-title">Bacharelado em Sistemas de Informação</div>
-            <span class="company">Universidade Estadual de Goiás - UEG</span>
-            <span class="date">2022- 2025 (7º período)</span>
-            <ul>
-                <li>Disciplinas relevantes: Programação Orientada a Objetos, Banco de Dados, Engenharia de Software</li>
-                <li>Projetos acadêmicos desenvolvidos em Java, PHP e MySQL</li>
-            </ul>
-        </div>
-    </section>
-    
-    <section id="habilidades">
-        <h2><i class="fas fa-code section-icon"></i>Habilidades Técnicas</h2>
-        
-        <div class="skills-container">
-            <div class="skill">JavaScript</div>
-            <div class="skill">Java</div>
-            <div class="skill">PHP</div>
-            <div class="skill">MySQL</div>
-            <div class="skill">HTML5/CSS3</div>
-            <div class="skill">Git</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Pacote Office</div>
-            
-        </div>
-    </section>
-    
-    <section id="projetos">
-        <h2><i class="fas fa-laptop-code section-icon"></i>Projetos Relevantes</h2>
-        
-        <div class="experience-item">
-            <div class="job-title">Sistema de Gestão para pet sh</div>
-            <ul>
-                <li>Desenvolvimento de módulo de banho e tosa  em php para projeto acadêmico</li>
-                <li>Integração com banco de dados MySQL para armazenamento de informações</li>
-                <li>Interface simples e intuitiva para usuários finais</li>
-            </ul>
-        </div>
-        
-        
-    </section>
+      </div>
+    </div>
+  </div>
+
+  <section id="resumo">
+    <h2><i class="fas fa-user section-icon"></i>Sobre Mim</h2>
+    <p>Busco constantemente superar desafios, sou apaixonada por aprender e sempre me esforço para alcançar os meus objetivos com determinação e dedicação.</p>
+  </section>
+
+  <section id="experiencia">
+    <h2><i class="fas fa-briefcase section-icon"></i>Experiência Profissional</h2>
+
+    <div class="experience-item">
+      <div class="job-title">Gerente de Hotel</div>
+      <span class="company">Itaberaí Hotel</span>
+      <span class="date">2020 - Atualmente</span>
+      <ul>
+        <li>Compromisso com a satisfação dos clientes, resolvendo problemas com qualidade</li>
+        <li>Gestão financeira, cobranças, controle de estoque com Excel e sistema Facility</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-title">Recepcionista</div>
+      <span class="company">Itaberaí Hotel</span>
+      <span class="date">2017 - 2020</span>
+      <ul>
+        <li>Gestão de reservas, atendimento ao cliente, emissão de notas fiscais</li>
+        <li>Check-in, check-out e organização de banco de dados</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="formacao">
+    <h2><i class="fas fa-graduation-cap section-icon"></i>Formação Acadêmica</h2>
+    <div class="experience-item">
+      <div class="job-title">Bacharelado em Sistemas de Informação</div>
+      <span class="company">Universidade Estadual de Goiás - UEG</span>
+      <span class="date">2022 - 2025 (7º período)</span>
+      <ul>
+        <li>Disciplinas: Programação OO, Banco de Dados, Engenharia de Software</li>
+        <li>Projetos com Java, PHP e MySQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2><i class="fas fa-code section-icon"></i>Habilidades Técnicas</h2>
+    <div class="skills-container">
+      <div class="skill">JavaScript</div>
+      <div class="skill">Java</div>
+      <div class="skill">PHP</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">HTML5/CSS3</div>
+      <div class="skill">Git</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Pacote Office</div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2><i class="fas fa-laptop-code section-icon"></i>Projetos Relevantes</h2>
+    <div class="experience-item">
+      <div class="job-title">Sistema de Gestão para Pet Shop</div>
+      <ul>
+        <li>Desenvolvimento de módulo de banho e tosa em PHP</li>
+        <li>Integração com MySQL</li>
+        <li>Interface simples para o usuário</li>
+      </ul>
+    </div>
+  </section>
 </body>
 </html>
