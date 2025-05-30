@@ -318,18 +318,28 @@
             padding: 1.2rem;
             text-align: center;
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .skill-item:hover {
             transform: translateY(-5px);
             border-color: var(--tech-accent);
-            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+            background: rgba(10, 25, 47, 0.8);
         }
         
         .skill-icon {
             font-size: 2rem;
             color: var(--tech-accent);
             margin-bottom: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-item:hover .skill-icon {
+            transform: scale(1.2);
         }
         
         .skill-name {
@@ -597,9 +607,9 @@
                     <div class="skills-container">
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <i class="fab fa-java"></i>
+                                <i class="fas fa-code"></i>
                             </div>
-                            <div class="skill-name">Java</div>
+                            <div class="skill-name">JavaSkip</div>
                         </div>
                         
                         <div class="skill-item">
@@ -622,14 +632,12 @@
                             </div>
                             <div class="skill-name">Pacote Office</div>
                         </div>
-                        <div class="skills-container">
+                        
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <i class="fab fa-java"></i>
+                                <i class="fas fa-chart-bar"></i>
                             </div>
-                            <div class="skill-name">Powwer BI</div>
-                        </div>
-                        
+                            <div class="skill-name">Power BI</div>
                         </div>
                     </div>
                 </div>
