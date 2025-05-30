@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karolayne Gonçalves</title>
+    <title>Karolayne Gonçalves - Currículo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --deep-blue: #0a192f;
             --tech-accent: #64ffda;
             --light-slate: #a8b2d1;
-            --dark-slate: #495670;
             --lightest-slate: #ccd6f6;
             --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
         
         body {
@@ -26,711 +19,317 @@
             background-color: var(--deep-blue);
             color: var(--lightest-slate);
             line-height: 1.6;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(17, 34, 64, 0.8) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(100, 255, 218, 0.05) 0%, transparent 40%);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        header {
-            padding: 4rem 0 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .terminal-bar {
-            background-color: rgba(10, 25, 47, 0.8);
-            height: 30px;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            border-radius: 8px 8px 0 0;
-            position: relative;
             max-width: 900px;
             margin: 0 auto;
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            border-bottom: none;
-        }
-        
-        .terminal-dots {
-            display: flex;
-            gap: 8px;
-        }
-        
-        .terminal-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-        
-        .dot-red { background-color: #ff5f56; }
-        .dot-yellow { background-color: #ffbd2e; }
-        .dot-green { background-color: #27c93f; }
-        
-        .terminal-content {
-            background-color: rgba(10, 25, 47, 0.6);
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            border-top: none;
-            border-radius: 0 0 8px 8px;
-            padding: 2.5rem;
-            max-width: 900px;
-            margin: 0 auto;
-            min-height: 300px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .terminal-line {
-            display: flex;
-            margin-bottom: 1rem;
-            font-family: 'Courier New', monospace;
-        }
-        
-        .terminal-prompt {
-            color: var(--tech-accent);
-            margin-right: 10px;
-            min-width: 120px;
-        }
-        
-        .terminal-command {
-            color: var(--lightest-slate);
-            flex-grow: 1;
-        }
-        
-        .terminal-cursor {
-            display: inline-block;
-            width: 8px;
-            height: 1.2rem;
-            background-color: var(--tech-accent);
-            margin-left: 4px;
-            animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        
-        .header-content {
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        .name-title h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--lightest-slate), var(--tech-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-        }
-        
-        .subtitle {
-            font-size: 1.5rem;
-            color: var(--tech-accent);
-            margin-bottom: 2rem;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            max-width: 800px;
-            margin: 2rem auto;
-        }
-        
-        .contact-card {
-            background: rgba(10, 25, 47, 0.4);
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: var(--transition);
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--tech-accent);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
-        }
-        
-        .contact-icon {
-            font-size: 2.5rem;
-            color: var(--tech-accent);
-            margin-bottom: 1rem;
-        }
-        
-        .contact-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-card p {
-            color: var(--light-slate);
-        }
-        
-        /* Main content */
-        main {
-            padding: 3rem 0;
-        }
-        
-        .grid-2col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-        }
-        
-        @media (max-width: 900px) {
-            .grid-2col {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .section {
-            background: rgba(10, 25, 47, 0.4);
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            border-radius: 8px;
             padding: 2rem;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
         }
         
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
-        }
-        
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background: var(--tech-accent);
-            transform: scaleY(0);
-            transform-origin: top;
-            transition: transform 0.5s ease;
-        }
-        
-        .section:hover::before {
-            transform: scaleY(1);
-        }
-        
-        .section-header {
+        .header-container {
             display: flex;
             align-items: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
         
-        .section-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(100, 255, 218, 0.1);
+        .photo-placeholder {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
+            background-color: rgba(100, 255, 218, 0.1);
+            border: 2px solid var(--tech-accent);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 1rem;
-            color: var(--tech-accent);
-            font-size: 1.5rem;
+            flex-shrink: 0;
+            overflow: hidden;
         }
         
-        .section-title {
-            font-size: 1.8rem;
+        .photo-placeholder i {
+            font-size: 3rem;
             color: var(--tech-accent);
+        }
+        
+        .header-content {
+            flex: 1;
+        }
+        
+        .header {
+            text-align: left;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--lightest-slate), var(--tech-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: var(--tech-accent);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--light-slate);
+        }
+        
+        .contact-icon {
+            color: var(--tech-accent);
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
+            border-left: 2px solid var(--tech-accent);
+            padding-left: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        section:hover {
+            border-left-width: 4px;
+        }
+        
+        h2 {
+            color: var(--tech-accent);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .section-icon {
+            font-size: 1.3rem;
         }
         
         .experience-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-        }
-        
-        .experience-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
+            margin-bottom: 1.8rem;
         }
         
         .job-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: var(--lightest-slate);
             margin-bottom: 0.3rem;
         }
         
         .company {
-            font-size: 1.1rem;
             color: var(--tech-accent);
-            margin-bottom: 0.8rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
             display: block;
         }
         
         .date {
             background: rgba(100, 255, 218, 0.1);
             color: var(--tech-accent);
-            padding: 0.3rem 0.8rem;
+            padding: 0.2rem 0.8rem;
             border-radius: 20px;
             font-size: 0.9rem;
             display: inline-block;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
         
-        .responsibilities {
+        ul {
             list-style-type: none;
         }
         
-        .responsibilities li {
-            margin-bottom: 0.8rem;
+        li {
+            margin-bottom: 0.5rem;
             padding-left: 1.5rem;
             position: relative;
+            color: var(--light-slate);
         }
         
-        .responsibilities li::before {
+        li::before {
             content: "▹";
             position: absolute;
             left: 0;
             color: var(--tech-accent);
         }
         
-        /* Skills */
         .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 1.2rem;
-        }
-        
-        .skill-item {
-            background: rgba(10, 25, 47, 0.6);
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            border-radius: 6px;
-            padding: 1.2rem;
-            text-align: center;
-            transition: var(--transition);
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
         }
         
-        .skill-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--tech-accent);
-            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
-            background: rgba(10, 25, 47, 0.8);
-        }
-        
-        .skill-icon {
-            font-size: 2rem;
-            color: var(--tech-accent);
-            margin-bottom: 0.8rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .skill-item:hover .skill-icon {
-            transform: scale(1.2);
-        }
-        
-        .skill-name {
-            font-size: 1rem;
-            color: var(--lightest-slate);
-        }
-        
-        /* About */
-        .about-content {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--light-slate);
-        }
-        
-        .about-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .highlight {
-            color: var(--tech-accent);
-            font-style: italic;
-            border-left: 2px solid var(--tech-accent);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        /* Footer */
-        footer {
-            background: rgba(10, 25, 47, 0.8);
-            padding: 3rem 0;
-            text-align: center;
-            border-top: 1px solid rgba(100, 255, 218, 0.1);
-            margin-top: 3rem;
-        }
-        
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .footer-logo {
-            font-size: 2.5rem;
-            color: var(--tech-accent);
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-text {
-            color: var(--light-slate);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+        .skill {
             background: rgba(100, 255, 218, 0.1);
             color: var(--tech-accent);
-            font-size: 1.4rem;
-            transition: var(--transition);
-        }
-        
-        .social-links a:hover {
-            background: var(--tech-accent);
-            color: var(--deep-blue);
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            color: var(--dark-slate);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
             font-size: 0.9rem;
         }
         
-        /* Responsividade */
+        @media print {
+            body {
+                background-color: white;
+                color: #333;
+                --tech-accent: #2a7f7f;
+                --lightest-slate: #333;
+                --light-slate: #555;
+            }
+            
+            .contact-icon {
+                color: var(--tech-accent);
+            }
+        }
+        
         @media (max-width: 768px) {
-            .name-title h1 {
-                font-size: 2.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .terminal-content {
+            body {
                 padding: 1.5rem;
             }
             
-            .terminal-prompt {
-                min-width: 90px;
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
             
-            .section {
-                padding: 1.5rem;
+            .photo-placeholder {
+                margin-bottom: 1.5rem;
             }
-        }
-        
-        /* Animação de digitação */
-        .typing-text {
-            display: inline-block;
-            overflow: hidden;
-            border-right: .15em solid var(--tech-accent);
-            white-space: nowrap;
-            animation: 
-                typing 3.5s steps(40, end) infinite,
-                blink-caret .75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--tech-accent); }
+            
+            .header {
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-info {
+                justify-content: center;
+                gap: 0.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    
-
-    <header>
-        <div class="terminal-bar">
-            <div class="terminal-dots">
-                <div class="terminal-dot dot-red"></div>
-                <div class="terminal-dot dot-yellow"></div>
-                <div class="terminal-dot dot-green"></div>
-            </div>
-        </div>
-        <div class="terminal-content">
-            <div class="terminal-line">
-                <div class="terminal-prompt">deep@portfolio:~$</div>
-                <div class="terminal-command">cat about_karolayne.txt</div>
-                <div class="terminal-cursor"></div>
-            </div>
-            <div class="terminal-line">
-                <div class="terminal-prompt"></div>
-                <div class="terminal-command">
-                    <span class="typing-text">Apaixonada por resolver problemas através da tecnologia e aprender continuamente...</span>
-                </div>
-            </div>
-        </div>
+    <div class="header-container">
+        <div class="photo-placeholder">
+    <img src="images/foto-perfil.jpg.jpeg" alt="Karolayne Gonçalves" style="width:100%; height:100%; object-fit:cover;">
+</div>
         
         <div class="header-content">
-            <div class="name-title">
+            <div class="header">
                 <h1>Karolayne Gonçalves</h1>
+                <div class="subtitle">Estudante de Sistemas de Informação</div>
                 
-                <div class="subtitle"></div>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <span>(62) 9.9860-5555</span>
                     </div>
-                    <h3>WhatsApp</h3>
-                    <p>(62) 9.9860-5555</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <span>gonalveskarolayne@ueg.com</span>
                     </div>
-                    <h3>Email</h3>
-                    <p>gonalveskarolayne@ueg.com</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>Itaberaí - Goiás</span>
                     </div>
-                    <h3>Localização</h3>
-                    <p>Itaberaí - Goiás</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <div class="grid-2col">
-            <div class="left-col">
-                <div class="section">
-                    <div class="section-header">
-                        <div class="section-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h2 class="section-title">Experiência Profissional</h2>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin-in contact-icon"></i>
+                        <span>linkedin.com/in/karolayne</span>
                     </div>
-                    
-                    <div class="experience-item">
-                        <div class="job-title">Gerente de Hotel</div>
-                        <span class="company">Itaberaí Hotel</span>
-                        <span class="date">2020 - Atualmente</span>
-                        <ul class="responsibilities">
-                            <li>Compromisso com a satisfação dos clientes, envolvendo-se ativamente na resolução de problemas e assegurando um atendimento de qualidade</li>
-                            <li>Gestão do orçamento do hotel, fechamento mensal de contas, liquidação de faturas e contas a  receber, cobranças, lançamento de despesas e controle de estoque através do sistema Facility e planilhas Excel.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="job-title">Recepcionista</div>
-                        <span class="company">Itaberaí Hotel</span>
-                        <span class="date">2017 - 2020</span>
-                        <ul class="responsibilities">
-                            <li>Cadastro de clientes e empresas</li>
-                            <li>Emissão de notas fiscais</li>
-                            <li>Reservas, check-in e check-out</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <div class="section-header">
-                        <div class="section-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h2 class="section-title">Educação</h2>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="job-title">Graduação em Sistema da Informação</div>
-                        <span class="company">Universidade Estadual de Goiás - UEG</span>
-                        <span class="date">7º Período - Cursando</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="right-col">
-                <div class="section">
-                    <div class="section-header">
-                        <div class="section-icon">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <h2 class="section-title">Sobre Mim</h2>
-                    </div>
-                    
-                    <div class="about-content">
-                        <p>Busco constantemente superar desafios, sou apaixonada por aprender e sempre me esforço para alcançar os meus objetivos com determinação e dedicação.</p>
-                        
-                        <div class="highlight">
-                            "Em busca de uma oportunidade para desenvolver e melhorar meus conhecimentos, visando sempre o crescimento mútuo."
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <div class="section-header">
-                        <div class="section-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h2 class="section-title">Conhecimento</h2>
-                    </div>
-                    
-                    <div class="skills-container">
-                        <!-- JavaScript -->
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <div class="skill-name">JavaScript</div>
-                        </div>
-                        
-                        <!-- Java -->
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-java"></i>
-                            </div>
-                            <div class="skill-name">Java</div>
-                        </div>
-                        
-                        <!-- PHP -->
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-php"></i>
-                            </div>
-                            <div class="skill-name">PHP</div>
-                        </div>
-                        
-                        <!-- MySQL -->
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="skill-name">mySQL</div>
-                        </div>
-                        
-                        <!-- Pacote Office -->
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-file-excel"></i>
-                            </div>
-                            <div class="skill-name">Pacote Office</div>
-                        </div>
-                        
-                        <!-- Power BI -->
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                            <div class="skill-name">Power BI</div>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github contact-icon"></i>
+                        <span>github.com/karolaynegs</span>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <p class="footer-text">Apaixonada por resolver problemas através da tecnologia e aprender continuamente.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <p class="copyright">Karolayne Gonçalves &copy; 2024 - Todos os direitos reservados</p>
-            </div>
+    </div>
+    
+    <section id="resumo">
+        <h2><i class="fas fa-user section-icon"></i>Sobre Mim</h2>
+        <p>Busco constantemente superar desafios, sou apaixonada por aprender e sempre me esforço para alcançar os meus objetivos com determinação e dedicação.</p>
+    </section>
+    
+    <section id="experiencia">
+        <h2><i class="fas fa-briefcase section-icon"></i>Experiência Profissional</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Gerente de Hotel</div>
+            <span class="company">Itaberaí Hotel</span>
+            <span class="date">2020 - Atualmente</span>
+            <ul>
+                <li>Compromisso com a satisfação dos clientes, envolvendo-se ativamente na resolução de problemas e assegurando um atendimento de qualidade</li>
+                <li>Gestão do orçamento do hotel, fechamento mensal de contas, liquidação de faturas e contas a receber, cobranças, lançamento de despesas e controle de estoque através do sistema Facility e planilhas Excel.</li>
+                
+            </ul>
         </div>
-    </footer>
-
-    <script>
-        // Simulação de terminal
-        document.addEventListener('DOMContentLoaded', function() {
-            const terminalCommand = document.querySelector('.terminal-command');
-            const terminalCursor = document.querySelector('.terminal-cursor');
-            const commands = [
-                "cat about_karolayne.txt",
-                "ls -l skills",
-                "open resume.pdf",
-                "connect --linkedin",
-                "run portfolio"
-            ];
+        
+        <div class="experience-item">
+            <div class="job-title">Recepcionista</div>
+            <span class="company">Itaberaí Hotel</span>
+            <span class="date">2017 - 2020</span>
+            <ul>
+                <li>Atendimento ao cliente e gestão de reservas</li>
+                <li>Emissão de documentos fiscais e controle de caixa</li>
+                <li>Cadastro de hospedes e empresas responsável por reservas, check-in e check-out.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="formacao">
+        <h2><i class="fas fa-graduation-cap section-icon"></i>Formação Acadêmica</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Bacharelado em Sistemas de Informação</div>
+            <span class="company">Universidade Estadual de Goiás - UEG</span>
+            <span class="date">2022- 2025 (7º período)</span>
+            <ul>
+                <li>Disciplinas relevantes: Programação Orientada a Objetos, Banco de Dados, Engenharia de Software</li>
+                <li>Projetos acadêmicos desenvolvidos em Java, PHP e MySQL</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="habilidades">
+        <h2><i class="fas fa-code section-icon"></i>Habilidades Técnicas</h2>
+        
+        <div class="skills-container">
+            <div class="skill">JavaScript</div>
+            <div class="skill">Java</div>
+            <div class="skill">PHP</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">HTML5/CSS3</div>
+            <div class="skill">Git</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Pacote Office</div>
             
-            let commandIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            let typingSpeed = 100;
-            
-            function typeCommand() {
-                const currentCommand = commands[commandIndex];
-                
-                if (isDeleting) {
-                    terminalCommand.textContent = currentCommand.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    terminalCommand.textContent = currentCommand.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-                
-                if (!isDeleting && charIndex === currentCommand.length) {
-                    isDeleting = true;
-                    typingSpeed = 50;
-                    setTimeout(typeCommand, 1500);
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    commandIndex = (commandIndex + 1) % commands.length;
-                    typingSpeed = 100;
-                    setTimeout(typeCommand, 500);
-                } else {
-                    setTimeout(typeCommand, typingSpeed);
-                }
-            }
-            
-            setTimeout(typeCommand, 2000);
-            
-            // Efeito de hover nas seções
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.addEventListener('mouseenter', () => {
-                    section.style.transform = 'translateY(-7px)';
-                });
-                
-                section.addEventListener('mouseleave', () => {
-                    section.style.transform = 'translateY(0)';
-                });
-            });
-        });
-    </script>
+        </div>
+    </section>
+    
+    <section id="projetos">
+        <h2><i class="fas fa-laptop-code section-icon"></i>Projetos Relevantes</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Sistema de Gestão para pet sh</div>
+            <ul>
+                <li>Desenvolvimento de módulo de banho e tosa  em php para projeto acadêmico</li>
+                <li>Integração com banco de dados MySQL para armazenamento de informações</li>
+                <li>Interface simples e intuitiva para usuários finais</li>
+            </ul>
+        </div>
+        
+        
+    </section>
 </body>
 </html>
