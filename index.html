@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karolayne Gonçalves - Portfólio</title>
+    <title>Karolayne Gonçalves</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <style>
         :root {
             --deep-blue: #0a192f;
@@ -14,7 +13,6 @@
             --dark-slate: #495670;
             --lightest-slate: #ccd6f6;
             --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-            --card-bg: rgba(17, 34, 64, 0.6);
         }
         
         * {
@@ -24,7 +22,7 @@
         }
         
         body {
-            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--deep-blue);
             color: var(--lightest-slate);
             line-height: 1.6;
@@ -42,7 +40,7 @@
         
         /* Header */
         header {
-            padding: 4rem 0 2rem;
+            padding: 4rem 0 3rem;
             position: relative;
             overflow: hidden;
         }
@@ -77,7 +75,7 @@
         .dot-green { background-color: #27c93f; }
         
         .terminal-content {
-            background-color: var(--card-bg);
+            background-color: rgba(10, 25, 47, 0.6);
             border: 1px solid rgba(100, 255, 218, 0.1);
             border-top: none;
             border-radius: 0 0 8px 8px;
@@ -87,7 +85,6 @@
             min-height: 300px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
         
         .terminal-line {
@@ -139,19 +136,6 @@
             font-size: 1.5rem;
             color: var(--tech-accent);
             margin-bottom: 2rem;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .subtitle::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--tech-accent), transparent);
         }
         
         .contact-grid {
@@ -163,14 +147,12 @@
         }
         
         .contact-card {
-            background: var(--card-bg);
+            background: rgba(10, 25, 47, 0.4);
             border: 1px solid rgba(100, 255, 218, 0.1);
             border-radius: 8px;
             padding: 1.5rem;
             text-align: center;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
         }
         
         .contact-card:hover {
@@ -179,32 +161,10 @@
             box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
         }
         
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--tech-accent);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease;
-        }
-        
-        .contact-card:hover::before {
-            transform: scaleX(1);
-        }
-        
         .contact-icon {
             font-size: 2.5rem;
             color: var(--tech-accent);
             margin-bottom: 1rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .contact-card:hover .contact-icon {
-            transform: scale(1.2);
         }
         
         .contact-card h3 {
@@ -214,43 +174,6 @@
         
         .contact-card p {
             color: var(--light-slate);
-        }
-        
-        /* Botão de ação */
-        .action-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background: transparent;
-            border: 2px solid var(--tech-accent);
-            color: var(--tech-accent);
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .action-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: var(--tech-accent);
-            transition: width 0.5s ease;
-            z-index: -1;
-        }
-        
-        .action-button:hover {
-            color: var(--deep-blue);
-        }
-        
-        .action-button:hover::before {
-            width: 100%;
         }
         
         /* Main content */
@@ -271,19 +194,18 @@
         }
         
         .section {
-            background: var(--card-bg);
+            background: rgba(10, 25, 47, 0.4);
             border: 1px solid rgba(100, 255, 218, 0.1);
             border-radius: 8px;
             padding: 2rem;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         .section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(100, 255, 218, 0.15);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
         }
         
         .section::before {
@@ -400,8 +322,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
         }
         
         .skill-item:hover {
@@ -427,55 +347,6 @@
             color: var(--lightest-slate);
         }
         
-        /* Progresso acadêmico */
-        .academic-progress {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: rgba(100, 255, 218, 0.05);
-            border-radius: 8px;
-            border-left: 3px solid var(--tech-accent);
-        }
-        
-        .progress-bar {
-            height: 10px;
-            background: rgba(100, 255, 218, 0.1);
-            border-radius: 5px;
-            margin-top: 10px;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: var(--tech-accent);
-            width: 75%; /* 7/8 = 87.5% mas ajustado visualmente */
-            border-radius: 5px;
-            position: relative;
-        }
-        
-        .progress-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            animation: progress-shine 2s infinite;
-        }
-        
-        @keyframes progress-shine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        
-        .progress-text {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 5px;
-            font-size: 0.9rem;
-            color: var(--light-slate);
-        }
-        
         /* About */
         .about-content {
             font-size: 1.1rem;
@@ -493,70 +364,6 @@
             border-left: 2px solid var(--tech-accent);
             padding-left: 1.5rem;
             margin: 2rem 0;
-        }
-        
-        /* Seção de projetos */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-        
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(100, 255, 218, 0.15);
-            border-color: var(--tech-accent);
-        }
-        
-        .project-image {
-            height: 180px;
-            background: linear-gradient(135deg, #0a192f, #112240);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--tech-accent);
-            font-size: 3rem;
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        .project-title {
-            font-size: 1.3rem;
-            color: var(--lightest-slate);
-            margin-bottom: 0.5rem;
-        }
-        
-        .project-description {
-            color: var(--light-slate);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .tech-tag {
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--tech-accent);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
         }
         
         /* Footer */
@@ -637,24 +444,6 @@
             .section {
                 padding: 1.5rem;
             }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .name-title h1 {
-                font-size: 2rem;
-            }
-            
-            .subtitle {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
-            }
         }
         
         /* Animação de digitação */
@@ -677,56 +466,11 @@
             from, to { border-color: transparent }
             50% { border-color: var(--tech-accent); }
         }
-        
-        /* Navegação por abas */
-        .tabs {
-            display: flex;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-        }
-        
-        .tab-button {
-            padding: 0.8rem 1.5rem;
-            background: transparent;
-            border: none;
-            color: var(--light-slate);
-            font-family: inherit;
-            font-size: 1rem;
-            cursor: pointer;
-            position: relative;
-            transition: var(--transition);
-        }
-        
-        .tab-button.active {
-            color: var(--tech-accent);
-        }
-        
-        .tab-button.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--tech-accent);
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
     </style>
 </head>
 <body>
+    <!-- Banner de atualização REMOVIDO -->
+
     <header>
         <div class="terminal-bar">
             <div class="terminal-dots">
@@ -752,6 +496,7 @@
         <div class="header-content">
             <div class="name-title">
                 <h1>Karolayne Gonçalves</h1>
+                <!-- Alteração no subtítulo com período acadêmico -->
                 <div class="subtitle">Graduanda em Sistema da Informação (7º período)</div>
             </div>
             
@@ -780,10 +525,6 @@
                     <p>Itaberaí - Goiás</p>
                 </div>
             </div>
-            
-            <a href="#" class="action-button">
-                <i class="fas fa-download"></i> Baixar Currículo
-            </a>
         </div>
     </header>
 
@@ -798,38 +539,25 @@
                         <h2 class="section-title">Experiência Profissional</h2>
                     </div>
                     
-                    <div class="tabs">
-                        <button class="tab-button active" data-tab="hotel-manager">Gerente de Hotel</button>
-                        <button class="tab-button" data-tab="receptionist">Recepcionista</button>
+                    <div class="experience-item">
+                        <div class="job-title">Gerente de Hotel</div>
+                        <span class="company">Itaberaí Hotel</span>
+                        <span class="date">2020 - Atualmente</span>
+                        <ul class="responsibilities">
+                            <li>Compromisso com a satisfação dos clientes, envolvendo-se ativamente na resolução de problemas e assegurando um atendimento de qualidade</li>
+                            <li>Gestão do orçamento do hotel, fechamento mensal de contas, liquidação de faturas e contas a  receber, cobranças, lançamento de despesas e controle de estoque através do sistema Facility e planilhas Excel.</li>
+                        </ul>
                     </div>
                     
-                    <div class="tab-content active" id="hotel-manager">
-                        <div class="experience-item">
-                            <div class="job-title">Gerente de Hotel</div>
-                            <span class="company">Itaberaí Hotel</span>
-                            <span class="date">2020 - Atualmente</span>
-                            <ul class="responsibilities">
-                                <li>Compromisso com a satisfação dos clientes, envolvendo-se ativamente na resolução de problemas e assegurando um atendimento de qualidade</li>
-                                <li>Gestão do orçamento do hotel, fechamento mensal de contas, liquidação de faturas e contas a  receber, cobranças, lançamento de despesas e controle de estoque através do sistema Facility e planilhas Excel.</li>
-                                <li>Liderança e treinamento de equipe com foco em excelência no atendimento</li>
-                                <li>Implementação de estratégias para aumento da ocupação e satisfação dos hóspedes</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="receptionist">
-                        <div class="experience-item">
-                            <div class="job-title">Recepcionista</div>
-                            <span class="company">Itaberaí Hotel</span>
-                            <span class="date">2017 - 2020</span>
-                            <ul class="responsibilities">
-                                <li>Cadastro de clientes e empresas</li>
-                                <li>Emissão de notas fiscais</li>
-                                <li>Reservas, check-in e check-out</li>
-                                <li>Atendimento ao cliente e solução de problemas</li>
-                                <li>Gestão de reservas e organização da agenda</li>
-                            </ul>
-                        </div>
+                    <div class="experience-item">
+                        <div class="job-title">Recepcionista</div>
+                        <span class="company">Itaberaí Hotel</span>
+                        <span class="date">2017 - 2020</span>
+                        <ul class="responsibilities">
+                            <li>Cadastro de clientes e empresas</li>
+                            <li>Emissão de notas fiscais</li>
+                            <li>Reservas, check-in e check-out</li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -845,17 +573,6 @@
                         <div class="job-title">Graduação em Sistema da Informação</div>
                         <span class="company">Universidade Estadual de Goiás - UEG</span>
                         <span class="date">7º Período - Cursando</span>
-                        
-                        <div class="academic-progress">
-                            <h4>Progresso do Curso</h4>
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                            <div class="progress-text">
-                                <span>Início: 2021</span>
-                                <span>Conclusão: 2024</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -872,8 +589,6 @@
                     <div class="about-content">
                         <p>Busco constantemente superar desafios, sou apaixonada por aprender e sempre me esforço para alcançar os meus objetivos com determinação e dedicação.</p>
                         
-                        <p>Atualmente cursando o 7º período de Sistemas de Informação, estou em busca de oportunidades para aplicar meus conhecimentos técnicos e minhas habilidades de gestão em projetos inovadores.</p>
-                        
                         <div class="highlight">
                             "Em busca de uma oportunidade para desenvolver e melhorar meus conhecimentos, visando sempre o crescimento mútuo."
                         </div>
@@ -885,11 +600,11 @@
                         <div class="section-icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h2 class="section-title">Conhecimentos Técnicos</h2>
+                        <h2 class="section-title">Conhecimento</h2>
                     </div>
                     
                     <div class="skills-container">
-                        <!-- Linguagens -->
+                        <!-- JavaScript -->
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fab fa-js"></i>
@@ -897,6 +612,7 @@
                             <div class="skill-name">JavaScript</div>
                         </div>
                         
+                        <!-- Java -->
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fab fa-java"></i>
@@ -904,6 +620,7 @@
                             <div class="skill-name">Java</div>
                         </div>
                         
+                        <!-- PHP -->
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fab fa-php"></i>
@@ -911,15 +628,15 @@
                             <div class="skill-name">PHP</div>
                         </div>
                         
-                        <!-- Banco de Dados -->
+                        <!-- MySQL -->
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fas fa-database"></i>
                             </div>
-                            <div class="skill-name">MySQL</div>
+                            <div class="skill-name">mySQL</div>
                         </div>
                         
-                        <!-- Ferramentas -->
+                        <!-- Pacote Office -->
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fas fa-file-excel"></i>
@@ -927,66 +644,12 @@
                             <div class="skill-name">Pacote Office</div>
                         </div>
                         
+                        <!-- Power BI -->
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fas fa-chart-bar"></i>
                             </div>
                             <div class="skill-name">Power BI</div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                            <div class="skill-name">Git</div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <div class="skill-name">HTML/CSS</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <div class="section-header">
-                        <div class="section-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <h2 class="section-title">Projetos Acadêmicos</h2>
-                    </div>
-                    
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">Sistema de Gestão Hoteleira</h3>
-                                <p class="project-description">Sistema desenvolvido em Java para gerenciamento de reservas, hospedes e faturamento de hotel.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Java</span>
-                                    <span class="tech-tag">MySQL</span>
-                                    <span class="tech-tag">Swing</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <div class="project-image">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">Análise de Dados com Power BI</h3>
-                                <p class="project-description">Dashboard interativo para análise de indicadores de desempenho hoteleiro.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Power BI</span>
-                                    <span class="tech-tag">Excel</span>
-                                    <span class="tech-tag">SQL</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1067,31 +730,6 @@
                     section.style.transform = 'translateY(0)';
                 });
             });
-            
-            // Sistema de abas
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remover classe ativa de todos
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    document.querySelectorAll('.tab-content').forEach(content => {
-                        content.classList.remove('active');
-                    });
-                    
-                    // Adicionar classe ativa ao botão clicado
-                    button.classList.add('active');
-                    
-                    // Mostrar conteúdo correspondente
-                    const tabId = button.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
-            
-            // Animação de progresso
-            const progressFill = document.querySelector('.progress-fill');
-            setTimeout(() => {
-                progressFill.style.width = '87.5%'; // 7 de 8 períodos
-            }, 500);
         });
     </script>
 </body>
