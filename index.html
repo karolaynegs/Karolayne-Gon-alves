@@ -79,7 +79,7 @@
             border: 1px solid rgba(100, 255, 218, 0.1);
             border-top: none;
             border-radius: 0 0 8px 8px;
-            padding: 2.5rem;
+            padding: 2rem;
             max-width: 900px;
             margin: 0 auto;
             min-height: 300px;
@@ -91,6 +91,7 @@
             display: flex;
             margin-bottom: 1rem;
             font-family: 'Courier New', monospace;
+            align-items: center;
         }
         
         .terminal-prompt {
@@ -136,6 +137,36 @@
             font-size: 1.5rem;
             color: var(--tech-accent);
             margin-bottom: 2rem;
+        }
+        
+        /* Novo estilo para a foto de perfil */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--tech-accent);
+            margin: 1rem auto;
+            position: relative;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .profile-pic:hover img {
+            transform: scale(1.05);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 15px rgba(100, 255, 218, 0.3); }
+            50% { box-shadow: 0 0 25px rgba(100, 255, 218, 0.5); }
+            100% { box-shadow: 0 0 15px rgba(100, 255, 218, 0.3); }
         }
         
         .contact-grid {
@@ -444,6 +475,11 @@
             .section {
                 padding: 1.5rem;
             }
+            
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
         }
         
         /* Animação de digitação */
@@ -469,8 +505,6 @@
     </style>
 </head>
 <body>
-    <!-- Banner de atualização REMOVIDO -->
-
     <header>
         <div class="terminal-bar">
             <div class="terminal-dots">
@@ -482,13 +516,21 @@
         <div class="terminal-content">
             <div class="terminal-line">
                 <div class="terminal-prompt">deep@portfolio:~$</div>
-                <div class="terminal-command">cat about_karolayne.txt</div>
+                <div class="terminal-command">./load_profile --visual</div>
                 <div class="terminal-cursor"></div>
             </div>
+            
+            <div class="terminal-line" style="justify-content: center;">
+                <div class="profile-pic">
+                    <!-- Substitua pela URL da sua foto -->
+                    <img src="foto-perfil.jpg" alt="Karolayne Gonçalves - Estudante de Sistemas de Informação">
+                </div>
+            </div>
+            
             <div class="terminal-line">
                 <div class="terminal-prompt"></div>
                 <div class="terminal-command">
-                    <span class="typing-text">Apaixonada por resolver problemas através da tecnologia e aprender continuamente...</span>
+                    <span class="typing-text">Iniciando sessão como Karolayne Gonçalves...</span>
                 </div>
             </div>
         </div>
@@ -496,8 +538,7 @@
         <div class="header-content">
             <div class="name-title">
                 <h1>Karolayne Gonçalves</h1>
-                <!-- Alteração no subtítulo com período acadêmico -->
-                <div class="subtitle">Graduanda em Sistema da Informação (7º período)</div>
+                <div class="subtitle">Graduando em Sistema da Informação (7º período)</div>
             </div>
             
             <div class="contact-grid">
@@ -545,7 +586,7 @@
                         <span class="date">2020 - Atualmente</span>
                         <ul class="responsibilities">
                             <li>Compromisso com a satisfação dos clientes, envolvendo-se ativamente na resolução de problemas e assegurando um atendimento de qualidade</li>
-                            <li>Gestão do orçamento do hotel, fechamento mensal de contas, liquidação de faturas e contas a  receber, cobranças, lançamento de despesas e controle de estoque através do sistema Facility e planilhas Excel.</li>
+                            <li>Gestão do orçamento do hotel, fechamento mensal de contas, liquidação de faturas e contas a receber, cobranças, lançamento de despesas e controle de estoque através do sistema Facility e planilhas Excel.</li>
                         </ul>
                     </div>
                     
@@ -680,7 +721,7 @@
             const terminalCommand = document.querySelector('.terminal-command');
             const terminalCursor = document.querySelector('.terminal-cursor');
             const commands = [
-                "cat about_karolayne.txt",
+                "./load_profile --visual",
                 "ls -l skills",
                 "open resume.pdf",
                 "connect --linkedin",
