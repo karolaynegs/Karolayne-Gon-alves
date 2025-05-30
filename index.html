@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karolayne Gonçalves - Profissional de TI</title>
+    <title>Karolayne Gonçalves</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -466,42 +466,10 @@
             from, to { border-color: transparent }
             50% { border-color: var(--tech-accent); }
         }
-        
-        /* Banner de atualização */
-        .update-banner {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(100, 255, 218, 0.9);
-            color: #0a192f;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            z-index: 1000;
-            animation: slideIn 0.5s forwards;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-        .update-banner i {
-            font-size: 1.5rem;
-        }
     </style>
 </head>
 <body>
-    <!-- Banner de atualização -->
-    <div class="update-banner">
-        <i class="fas fa-check-circle"></i>
-        <span>Alterações solicitadas implementadas!</span>
-    </div>
-
+    
     <header>
         <div class="terminal-bar">
             <div class="terminal-dots">
@@ -527,7 +495,8 @@
         <div class="header-content">
             <div class="name-title">
                 <h1>Karolayne Gonçalves</h1>
-                <div class="subtitle">Graduanda em Sistema da Informação</div>
+                
+                <div class="subtitle">Graduanda em Sistema da Informação (7º período)</div>
             </div>
             
             <div class="contact-grid">
@@ -760,14 +729,6 @@
                     section.style.transform = 'translateY(0)';
                 });
             });
-            
-            // Remover banner de atualização após 3 segundos
-            setTimeout(() => {
-                document.querySelector('.update-banner').style.opacity = 0;
-                setTimeout(() => {
-                    document.querySelector('.update-banner').style.display = 'none';
-                }, 500);
-            }, 3000);
         });
     </script>
 </body>
