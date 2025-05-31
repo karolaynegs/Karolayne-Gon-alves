@@ -35,15 +35,17 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
+      background-color: rgba(100, 255, 218, 0.1);
       border: 2px solid var(--tech-accent);
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
     }
 
-    .photo-placeholder img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .photo-placeholder i {
+      font-size: 3rem;
+      color: var(--tech-accent);
     }
 
     .header-content {
@@ -191,7 +193,7 @@
 <body>
   <div class="header-container">
     <div class="photo-placeholder">
-      <img src="foto-perfil.jpg" alt="Karolayne Gonçalves">
+      <i class="fas fa-user"></i>
     </div>
 
     <div class="header-content">
